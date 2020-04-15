@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 @Component @Slf4j
 public class BatchProcessor {
 
-    public static final int FIVE_MILLION = 5000000;
+    public static final int ONE_MILLION = 1000000;
     @Autowired
     private EntityManager entityManager;
 
@@ -19,7 +19,7 @@ public class BatchProcessor {
     public void insertData() {
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
-        for(int i = 0; i< FIVE_MILLION; i++) {
+        for(int i = 0; i< ONE_MILLION; i++) {
             Customer customer = new Customer("John" + i, "Smith" + i);
             this.entityManager.persist(customer);
         }

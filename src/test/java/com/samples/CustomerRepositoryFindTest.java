@@ -17,7 +17,7 @@ import java.util.concurrent.Future;
 @SpringBootTest
 @Import(SpringAsyncConfig.class)
 @Slf4j
-public class CustomerRepositoryTest {
+public class CustomerRepositoryFindTest {
 
     @Autowired
     private EntityManagerFactory entityManagerFactory;
